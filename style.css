@@ -46,8 +46,6 @@ h1 {
 .simple-btn {
 	background-color: hsl(245, 75%, 52%);
 	position: relative;
-	transition: all .4s ease;
-	border: 1px solid hsl(245, 75%, 52%);
     border-radius: 10px;
 	text-align: center;
 	line-height: 60px;
@@ -59,37 +57,10 @@ h1 {
     cursor: pointer;
     font-weight: 500;
 }
-.simple-btn:before,
-.simple-btn:after {
-	position: absolute;
-	content: "";
-	top: 0;
-	left: 0;
-	height: 0%;
-	width: 100%;
-	z-index: -1;
-	background-color: rgb(20, 19, 19);
-    color: rgb(228, 206, 6);
-	opacity: 0;
-	transition: all .4s ease-in;
-    
-}
-.simple-btn:after {
-	bottom: 0;
-	top: inherit;
-    
-}
-.simple-btn:hover:before,
-.simple-btn:hover:after {
-	height: 50%;
-	opacity: 1;
-    
-}
 .simple-btn:hover {
 	box-shadow: 2px 5px 7px rgba(0,0,0,.14);
-    color: hsl(245, 75%, 52%);
     transition: all .5s ease-in;
-    border-radius: 10px;
+    background-color: hsl(245, 95%, 49%);
 }
 
 .resultado {
@@ -128,5 +99,11 @@ h1 {
         font-size: 1.5rem;
         padding-top: 120px;
     }
-
+    .copy {
+        text-decoration: none;
+        position: absolute;
+        color: hsla(245, 95%, 49%, 0.555);
+        font-weight: 600;
+        bottom: 4rem;
+    }
 }
