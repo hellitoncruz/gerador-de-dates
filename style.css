@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+.container {
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(238, 255, 0, 0.425);
+    justify-content: center;
+    background-image: url(/dark-long-hallway.jpg);
+    background-position: center top ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+h1 {
+    color: rgb(8, 25, 180);
+}
+
+.box {
+    width: 40rem;
+    height: 20rem;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 10px 10px rgba(9, 72, 189, 0.507);
+    padding-top: 2rem;
+    background-image: url(/photo-1643392613721-96c40796517a.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+
+
+.simple-btn {
+	background-color: hsl(245, 75%, 52%);
+	position: relative;
+	transition: all .4s ease;
+	border: 1px solid hsl(245, 75%, 52%);
+    border-radius: 10px;
+	text-align: center;
+	line-height: 60px;
+	padding: .5rem 2rem;
+	color: #fff;
+	z-index: 1;
+    overflow: hidden;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+.simple-btn:before,
+.simple-btn:after {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	height: 0%;
+	width: 100%;
+	z-index: -1;
+	background-color: rgb(20, 19, 19);
+    color: rgb(228, 206, 6);
+	opacity: 0;
+	transition: all .4s ease-in;
+    
+}
+.simple-btn:after {
+	bottom: 0;
+	top: inherit;
+    
+}
+.simple-btn:hover:before,
+.simple-btn:hover:after {
+	height: 50%;
+	opacity: 1;
+    
+}
+.simple-btn:hover {
+	box-shadow: 2px 5px 7px rgba(0,0,0,.14);
+    color: hsl(245, 75%, 52%);
+    transition: all .5s ease-in;
+    border-radius: 10px;
+}
+
+.resultado {
+    font-size: 2.5rem;
+    color: rgb(3, 3, 49);
+}
+
+@media (max-width: 500px) {
+    .box {
+        width: 330px;
+        height: 480px;
+        background-image: url(/img-top.png);
+        background-size: 100% ;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-color: rgb(243, 243, 243);
+        justify-content: space-around;
+        text-align: center;
+    }
+    .container {
+        background-image: none;
+        background-color: rgba(12, 126, 179, 0.205);
+        justify-content: flex-start;
+        padding-top: 2rem;
+        gap: 2rem;
+    }
+    .simple-btn {
+        font-size: 1rem;
+        padding:0 20px;
+    }
+    .resultado {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    h1 {
+        font-size: 1.5rem;
+        padding-top: 120px;
+    }
+
+}
